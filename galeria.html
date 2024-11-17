@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galería | 3D Martel</title>
+    <link rel="stylesheet" href="./galeria.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div  class="titulo">
+            <img src="./Imagenes/logo 3D martel.png" alt="Logo 3D Martel">
+            <h1>3D Martel</h1>
+            <div class="botones"> 
+                <a class="boton1" href="./inicio.html">Inicio</a>
+                <a class="boton1" href="./galeria.html">Galería</a> 
+                <a class="boton1" href="./nosotros.html">Nosotros</a>
+            </div>
+        </div>
+    
+     
+    </header>
+    <main>
+        <h2>Modelos</h2>
+
+        <div class="galeria1">
+            <div class="galeria2">
+                <img src="./Imagenes/modelo1.jpeg" alt="Modelo 1">
+                <img src="./Imagenes/modelo2.jpeg" alt="">
+                <img src="./Imagenes/modelo3.jpeg" alt="">
+            </div>
+            <div class="galeria2">
+                <img src="./Imagenes/modelo4.jpeg" alt="Modelo 1">
+                <img src="./Imagenes/modelo5.jpeg" alt="">
+                <img src="./Imagenes/modelo6.jpeg" alt="">
+            </div>
+            <div class="galeria2">
+                <img src="./Imagenes/modelo7.jpeg" alt="">
+                <img src="./Imagenes/modelo8.jpeg" alt="">
+                <img src="./Imagenes/modelo9.jpeg" alt="">
+            </div>
+        </div>
+        <br>
+        <h2 id="llavero">Llaveros</h2>
+        <br>
+        <div class="contenedor-slideshow">
+            <div class="mySlides fade">
+                <div class="numbertext">1 / 4</div>
+                <img src="./Imagenes/llavero1.jpeg" style="width:100%">
+                <div class="text">Llavero 1</div>
+            </div>
+            <div class="mySlides fade">
+                <div class="numbertext">2 / 4</div>
+                <img src="./Imagenes/llavero2.jpeg" style="width:100%">
+                <div class="text">Llavero 2</div>
+            </div>
+              
+            <div class="mySlides fade">
+                <div class="numbertext">3 / 4</div>
+                <img src="./Imagenes/llavero3.jpeg" style="width:100%">
+                <div class="text">Llavero 3</div>
+            </div>
+            <div class="mySlides fade">
+                <div class="numbertext">4 / 4</div>
+                <img src="./Imagenes/llavero4.jpeg" style="width:100%">
+                <div class="text">Llavero 4</div>
+            </div>
+          <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+          <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        </div>
+        <div style="text-align:center">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+            <span class="dot" onclick="currentSlide(4)"></span>
+        </div>
+
+    </main>
+    <script>
+        let slideIndex = 1;
+    showSlides(slideIndex);
+    
+    // Next/previous controls
+    function plusSlides(n) {
+      showSlides(slideIndex += n);
+    }
+    
+    // Thumbnail image controls
+    function currentSlide(n) {
+      showSlides(slideIndex = n);
+    }
+    
+    function showSlides(n) {
+      let i;
+      let slides = document.getElementsByClassName("mySlides");
+      let dots = document.getElementsByClassName("dot");
+      if (n > slides.length) {slideIndex = 1}
+      if (n < 1) {slideIndex = slides.length}
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+      for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex-1].style.display = "block";
+      dots[slideIndex-1].className += " active";
+    }
+    </script>
+
+    <footer>
+        <div class="footer1">
+            <div  class="footer2">
+                <p>Creadores: </p>
+                <p>fmancini@fundacionedison.org.ar</p>
+                <p>cmartel@fundacionedison.org.ar</p>
+            </div>
+            <div class="footer2" id="footer22">
+                <p>3D Martel </p>
+                <p>+54 261 738 5505</p>
+                <p>3DMartel@gmail.com</p>
+            </div>
+            <div class="footer2">
+                <p id="logitos">Contactos</p>
+                <div class="footer3">
+                    <a href="https://www.instagram.com/3d.martel?igsh=cDR1ajBmdTNqczc1" target="_blank"> <img src="./Imagenes/logoig.png" alt="logo de Instagram"></a>
+                    <br>
+                    <a href="wa.me/+542612480531"target="_blank"> <img src="./Imagenes/logo de WhastApp.webp" alt="logo de WhatsApp"></a>
+                </div>
+            </div>
+        </div>
+     
+        
+    </footer>
+</body>
+</html>

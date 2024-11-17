@@ -1,0 +1,287 @@
+body{
+    margin: 0px;
+    display:flex;
+    flex-direction:column;
+}
+header{
+    background-color: rgb(48, 66, 148);
+    padding-bottom: 20px ;
+}
+.titulo{
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    flex-direction: row;
+    font-family: "Exo 2";
+    gap: 50px;
+    color: rgb(242, 65, 68);
+    -webkit-text-stroke-color: black;
+    padding: 20px;
+}
+.titulo img{
+    width: 11%;
+    }
+h1 {
+        font-size: 60px;
+    }
+.botones {
+        display: flex;
+        flex-direction: row;
+        justify-content: right;
+        gap: 35px;
+        margin-right: 5%;
+        margin-left: 35%;
+    }
+.botones a{
+    text-decoration: none;
+    color: rgb(242, 65, 68);
+    -webkit-text-stroke: 0.1px;
+    -webkit-text-stroke-color: black;
+    font-size: 35px;
+}
+body{
+    background-color:#e9c4c4;
+}
+.boton1:hover{
+    animation: boton1 1s infinite ;
+    color: aliceblue;
+
+}
+@keyframes boton1{
+0%{ transform: scale(1.1); }
+50%{ transform: scale(1.2); }
+100%{ transform: scale(1.1); }
+
+}
+
+h2{
+    color: rgb(242, 65, 68);
+    text-align: center;
+    font-size: 40px;
+}
+
+.galeria1{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 45px;
+}
+
+.galeria2{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+.galeria2 img{
+    width: 20%;
+    border-radius: 5%;
+    transition: transform 0.5s;
+}
+
+.galeria2 img:hover{
+    transform: scale(1.2);
+    animation: pulsando 1s infinite ;
+}
+
+@keyframes pulsando{
+    0% {
+        transform: scale(1.2);
+    }
+
+    50% {
+        transform: scale(1.25);
+    }
+
+    100%{
+        transform: scale(1.2);
+    }
+}
+main{
+    padding-bottom: 30px;
+    min-height: 100vh;
+}
+
+
+/* Slideshow container */
+.contenedor-slideshow {
+    max-width: 500px;
+    position: relative;
+    margin: auto;
+  }
+  .contenedor-slideshow img{
+    border-radius: 5%;
+  }
+  /* Hide the images by default */
+  .mySlides {
+    display: none;
+    
+  }
+  
+  /* Next & previous buttons */
+  .prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+  }
+  
+  /* Position the "next button" to the right */
+  .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+  
+  /* On hover, add a black background color with a little bit see-through */
+  .prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+  }
+  
+  /* Caption text */
+  .text {
+    color: #f2f2f2;
+    font-size: 15px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 8px;
+    width: 100%;
+    text-align: center;
+  }
+  
+  /* Number text (1/3 etc) */
+  .numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+  }
+  
+  /* The dots/bullets/indicators */
+  .dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+  }
+  
+  .active, .dot:hover {
+    background-color: #717171;
+  }
+
+  footer{
+    background-color: rgb(48, 66, 148);
+    margin: none;
+    padding-bottom: 40px;
+    padding-top: 40px;
+}
+.footer1{
+    display: flex;
+    justify-content:space-around ;
+    gap:50px;
+    font-family: 'Poppins', sans-serif;  
+    font-weight: 400;  
+}
+.footer2{
+    display: flex;
+    flex-direction: column;  
+    gap: 30px;
+}
+.footer2 p{
+    margin:0%;
+}
+
+p{
+    color:black;
+    font-size: 30px;
+}
+
+
+.footer2 img{
+    width: 75px;
+}
+#logitos{
+    display:none;
+}
+
+
+@media screen and (max-width:480px){
+    html{
+        margin:none;
+    }
+    body{
+        width:100vw;
+    }
+    header{
+        background-color:rgb(48, 66, 148);
+    }
+    .titulo{
+        display:flex;
+        flex-direction:column;
+        justify-content:center;
+        margin:none;
+    }
+    h1{
+        display:none;
+    }
+    .titulo img{
+        width:50%
+    }
+    .botones{
+        justify-content:center;
+        margin:0px;
+    }
+    .botones a{
+        font-size:20px;
+    }
+
+    .introduccion img{
+        display:none;
+    }
+    h2{
+        font-size:30px;
+    }
+    p{
+        font-size:15px;
+        text-align:center;
+    }
+    .contenedor-slideshow {
+        max-width: 250px;
+        position: relative;
+        margin: auto;
+      }
+    
+    .footer2{
+        justify-content:top;
+    }
+    .footer2 p{
+        font-size:12;
+        margin-left:5%;
+    }
+    #footer22{
+        display:none;
+    }
+    .footer2 img{
+        width:50px;
+    }
+    #logitos{
+        display:flex;
+    }
+    .footer3{
+        display:flex;
+        flex-direction:row;
+        gap:3px;
+    }
+    
+}
